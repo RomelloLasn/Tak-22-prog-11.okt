@@ -1,11 +1,7 @@
-user_name = ('kroonid eurodeks' + '?')
-print('hello,' 'kroonid eurodeks')
+eek = int(input('Sisesta summa kroonides'))
 
-kroonid = ('kroonid')
-eurod = ('eurod')
+eur = eek / 15.6466
 
-a = int(input('kroonid: '))
-b = int(input('eurod: '))
+eur = round(eur, 2)
 
-print(a/b)
-
+print(eur)
