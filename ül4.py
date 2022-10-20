@@ -1,3 +1,4 @@
+
 a = int(input ("Esimene number : "))
 b = int(input ("Teine number: "))
 
