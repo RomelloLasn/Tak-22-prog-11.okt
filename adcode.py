@@ -3,3 +3,16 @@ up = moves.count('(')
 down = moves.count(')')
 finish = up - down
 print(finish)
+
+floor = 0
+move_count = move_count + 1
+for m in moves:
+    if m == '(': 
+        floor = floor + 1
+        
+else:
+    floor = floor -1
+    if floor < 0:
+        break
+    print(move_count)
+    print(floor)
