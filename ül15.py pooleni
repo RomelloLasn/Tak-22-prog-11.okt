@@ -1,0 +1,8 @@
+ee = {
+"eesnimi": "Romello",
+"perenimi": "Lasn",
+"sünniaasta":"2006",
+"elukoht": "Saaremaa",
+"lemmik magustoit": "jäätis",
+}
+print(ee.get('place_of_living'))
