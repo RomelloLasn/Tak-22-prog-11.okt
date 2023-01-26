@@ -1,0 +1,12 @@
+import praw
+reddit = praw.Reddit(
+    client_id="HX92C5fPHopIUYSvDrNy5w",
+    client_secret="--t_EwWtslmb1uDsUoVfonqe5p4rRA",
+    user_agent="Python:HX92C5fPHopIUYSvDrNy5w:0.23 (by u/<RomelloLasn)",
+    )
+
+
+print(reddit.read_only)
+
+for submission in reddit.subreddit("eesti").hoy(limit-10):
+    print(submission.title)
