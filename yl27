@@ -1,12 +1,20 @@
 import praw
-reddit = praw.Reddit(
-    client_id="HX92C5fPHopIUYSvDrNy5w",
-    client_secret="--t_EwWtslmb1uDsUoVfonqe5p4rRA",
-    user_agent="Python:HX92C5fPHopIUYSvDrNy5w:0.23 (by u/<RomelloLasn)",
-    )
+import sys
+import os
 
+current = os.path.dirname(os.path.realpath(__file__))
+parent = os.path.dirname(current)
+sys.path.append(parent)
+
+from yl27_config import config
+
+reddit = praw.Reddit(
+    client_id = config["HX92C5fPHopIUYSvDrNy5w"],
+    client_secret = config["--t_EwWtslmb1uDsUoVfonqe5p4rRA"],
+    user_agent = config["Python:HX92C5fPHopIUYSvDrNy5w:0.23 (by u/<RomelloLasn)"],
+)
 
 print(reddit.read_only)
 
-for submission in reddit.subreddit("eesti").hoy(limit-10):
+for submission in reddit.subreddit('eesti').hot(limit=10):
     print(submission.title)
